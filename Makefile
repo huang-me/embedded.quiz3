@@ -1,8 +1,11 @@
 CC = gcc
 FLAGS = -O2
-files = asr numofsteps compareGCD bitset
+files = asr numofsteps compareGCD bitset powfour
 
 all: $(files)
+
+powfour: powfour.c
+	$(CC) $^ -o $@ $(FLAGS)
 
 bitset: bitset.c
 	$(CC) $^ -o $@ $(FLAGS)
